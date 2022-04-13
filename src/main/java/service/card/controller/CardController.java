@@ -21,10 +21,6 @@ public class CardController {
         return cardRepository.findAll();
     }
 
-    @PostMapping("/salvar")
-    public ResponseEntity<CardModel> salvarCards(RequestBody CardModel){
-
-    }
 
 
 }
