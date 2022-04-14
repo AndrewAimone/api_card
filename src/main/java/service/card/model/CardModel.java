@@ -8,15 +8,15 @@ public class CardModel {
 
     @Id
     @GeneratedValue
-   private int id_card;
+    private int id_card;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="id_header")
-   private HeaderModel id_header;
+     private HeaderModel id_header;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="id_body")
-   private BodyModel id_body;
+    private BodyModel id_body;
 
     public int getId_card() {
         return id_card;
