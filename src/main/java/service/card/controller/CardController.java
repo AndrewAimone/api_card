@@ -17,8 +17,8 @@ public class CardController {
     private CardRepository cardRepository;
 
     @GetMapping("/buscar")
-    public List<CardModel> buscarCards(){
-        return cardRepository.findAll();
+    public ResponseEntity<Iterable<CardModel>> buscarCards(){
+        return ResponseEntity.ok(cardRepository.findAll());
     }
 
 
