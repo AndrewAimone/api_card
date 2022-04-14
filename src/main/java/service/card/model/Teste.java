@@ -1,9 +1,6 @@
 package service.card.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name= "teste")
@@ -14,6 +11,11 @@ public class Teste {
     private int id;
 
     private String nome;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="fkbody")
+    private BodyModel bodyfk;
+
 
     public int getId() {
         return id;
