@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import service.card.model.CardModel;
 import service.card.repository.CardRepository;
 
+import javax.smartcardio.Card;
 import java.util.ArrayList;
 
 
@@ -20,12 +21,18 @@ public class CardController {
         return "OK FUNCIONANDO:";
     }
 
-    @GetMapping("/buscar")
+    @GetMapping("/cadastrados")
     public ArrayList<CardModel> buscarCards(){
         ArrayList<CardModel> lista;
         lista =  (ArrayList<CardModel>) cardRepository.findAll();
         return lista;
     }
+
+//    public ArrayList<Conta> RecuperarTudo() {
+//        ArrayList<Conta> lista;
+//        lista = (ArrayList<Conta>) dao.findAll();
+//        return lista;
+//    }
 
 
 
