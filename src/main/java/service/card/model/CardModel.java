@@ -10,11 +10,11 @@ public class CardModel {
     @GeneratedValue
    private int id_card;
 
-    @OneToMany
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="id_header")
    private HeaderModel id_header;
 
-    @OneToMany
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="id_body")
    private BodyModel id_body;
 

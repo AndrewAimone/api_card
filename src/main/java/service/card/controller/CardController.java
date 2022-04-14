@@ -15,6 +15,11 @@ public class CardController {
     @Autowired
     private CardRepository cardRepository;
 
+    @GetMapping("/teste")
+    public String teste(){
+        return "OK FUNCIONANDO:";
+    }
+
     @GetMapping("/buscar")
     public ArrayList<CardModel> buscarCards(){
         ArrayList<CardModel> lista;
