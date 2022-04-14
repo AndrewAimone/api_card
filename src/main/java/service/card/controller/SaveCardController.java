@@ -16,8 +16,8 @@ public class SaveCardController {
     @Autowired
     CardRepository cardRepository;
     CardModel cardModel;
-    @PostMapping("/salvar")
-    public ResponseEntity<CardModel> teste(@RequestBody CardModel cardModel){
-        return ResponseEntity.ok().body(cardRepository.save(cardModel));
-    }
+//    @PostMapping("/salvar")
+//    public ResponseEntity<CardModel> teste(@RequestBody CardModel cardModel){
+//        return ResponseEntity.ok().body(cardRepository.save(cardModel));
+//    }
 }
