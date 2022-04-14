@@ -14,7 +14,7 @@ public class TesteController {
     @Autowired
     CardRepository cardRepository;
 
-    @GetMapping("/")
+    @GetMapping("/teste")
     public ResponseEntity<List<Teste>> testandometodo(){
         return  ResponseEntity.ok(cardRepository.findAll());
     }

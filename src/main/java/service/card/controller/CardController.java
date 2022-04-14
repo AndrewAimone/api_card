@@ -21,12 +21,12 @@ public class CardController {
         return "OK FUNCIONANDO:";
     }
 
-    @GetMapping("/cadastrados")
-    public ArrayList<CardModel> buscarCards(){
-        ArrayList<CardModel> lista;
-        lista =  (ArrayList<CardModel>) cardRepository.findAll();
-        return lista;
-    }
+//    @GetMapping("/cadastrados")
+//    public ArrayList<CardModel> buscarCards(){
+//        ArrayList<CardModel> lista;
+//        lista =  (ArrayList<CardModel>) cardRepository.findAll();
+//        return lista;
+//    }
 
 //    public ArrayList<Conta> RecuperarTudo() {
 //        ArrayList<Conta> lista;
