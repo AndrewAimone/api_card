@@ -1,12 +1,11 @@
 package service.card.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import service.card.model.CardModel;
 import service.card.repository.CardRepository;
 
-import java.util.List;
+import java.util.ArrayList;
 
 
 @RestController
@@ -17,8 +16,10 @@ public class CardController {
     private CardRepository cardRepository;
 
     @GetMapping("/buscar")
-    public ResponseEntity<Iterable<CardModel>> buscarCards(){
-        return ResponseEntity.ok(cardRepository.findAll());
+    public ArrayList<CardModel> buscarCards(){
+        ArrayList<CardModel> lista;
+        lista =  (ArrayList<CardModel>) cardRepository.findAll();
+        return lista;
     }
 
 
