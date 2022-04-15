@@ -13,7 +13,7 @@ public class Teste {
     private String nome;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="fkbody")
+    @JoinColumn(name="bodyfk")
     private BodyModel bodyfk;
 
 
