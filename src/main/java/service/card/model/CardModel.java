@@ -12,11 +12,11 @@ public class CardModel {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="id_header")
-     private HeaderModel id_header;
+     private HeaderModel header;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="id_body")
-    private BodyModel id_body;
+    @JoinColumn(name="id_body_fk")
+    private BodyModel body;
 
     public int getId_card() {
         return id_card;
@@ -26,19 +26,19 @@ public class CardModel {
         this.id_card = id_card;
     }
 
-    public HeaderModel getId_header() {
-        return id_header;
+    public HeaderModel getHeader() {
+        return header;
     }
 
-    public void setId_header(HeaderModel id_header) {
-        this.id_header = id_header;
+    public void setHeader(HeaderModel header) {
+        this.header = header;
     }
 
-    public BodyModel getId_body() {
-        return id_body;
+    public BodyModel getBody() {
+        return body;
     }
 
-    public void setId_body(BodyModel id_body) {
-        this.id_body = id_body;
+    public void setBody(BodyModel body) {
+        this.body = body;
     }
 }

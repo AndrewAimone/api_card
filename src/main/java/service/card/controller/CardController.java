@@ -3,6 +3,7 @@ package service.card.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import service.card.model.CardModel;
+import service.card.model.Teste;
 import service.card.repository.CardRepository;
 
 import javax.smartcardio.Card;
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 
 
 @RestController
-@RequestMapping("/cards")
+@RequestMapping("/card")
 public class CardController {
 
     @Autowired
@@ -21,18 +22,13 @@ public class CardController {
         return "OK FUNCIONANDO:";
     }
 
-//    @GetMapping("/cadastrados")
-//    public ArrayList<CardModel> buscarCards(){
-//        ArrayList<CardModel> lista;
-//        lista =  (ArrayList<CardModel>) cardRepository.findAll();
-//        return lista;
-//    }
+    @GetMapping("/listar")
+    public ArrayList<CardModel> testandometodo(){
+        ArrayList<CardModel> lista;
+        lista = (ArrayList<CardModel>) cardRepository.findAll();
 
-//    public ArrayList<Conta> RecuperarTudo() {
-//        ArrayList<Conta> lista;
-//        lista = (ArrayList<Conta>) dao.findAll();
-//        return lista;
-//    }
+        return  lista;
+    }
 
 
 

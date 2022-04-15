@@ -6,6 +6,6 @@ import service.card.model.CardModel;
 import service.card.model.Teste;
 
 @Repository
-public interface CardRepository extends JpaRepository<Teste, Integer> {
+public interface CardRepository extends JpaRepository<CardModel, Integer> {
 
 }
