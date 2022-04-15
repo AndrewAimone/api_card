@@ -9,10 +9,10 @@ public class CardModel {
     @Id
     @GeneratedValue
     private int id_card;
-
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="id_header")
-     private HeaderModel header;
+//
+//    @ManyToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name="id_header")
+//     private HeaderModel header;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="id_body_fk")
@@ -26,13 +26,13 @@ public class CardModel {
         this.id_card = id_card;
     }
 
-    public HeaderModel getHeader() {
-        return header;
-    }
-
-    public void setHeader(HeaderModel header) {
-        this.header = header;
-    }
+//    public HeaderModel getHeader() {
+//        return header;
+//    }
+//
+//    public void setHeader(HeaderModel header) {
+//        this.header = header;
+//    }
 
     public BodyModel getBody() {
         return body;
