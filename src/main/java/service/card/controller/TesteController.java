@@ -22,13 +22,13 @@ public class TesteController {
     @Autowired
     BodyRepository bodyRepository;
 
-    @GetMapping("/listar")
-    public ArrayList<Teste> testandometodo(){
-        ArrayList<Teste> lista;
-        lista = (ArrayList<Teste>) cardRepository.findAll();
-
-        return  lista;
-    }
+//    @GetMapping("/listar")
+//    public ArrayList<Teste> testandometodo(){
+//        ArrayList<Teste> lista;
+//        lista = (ArrayList<Teste>) cardRepository.findAll();
+//
+//        return  lista;
+//    }
     @GetMapping("/body")
     public ArrayList<BodyModel> testando(){
         ArrayList<BodyModel> lista;
