@@ -14,7 +14,7 @@ public class Teste {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="bodyfk")
-    private BodyModel bodyModel;
+    private BodyModel fkbody;
 
 
     public int getId() {
