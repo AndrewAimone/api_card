@@ -17,6 +17,15 @@ public class CardModel {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="id_body_fk")
     private BodyModel body;
+    private String tipo;
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 
     public int getId_card() {
         return id_card;
