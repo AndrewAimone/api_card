@@ -13,7 +13,8 @@ public class Teste {
     private String nome;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    private BodyModel bodyfk;
+    @JoinColumn(name = "bodyfk")
+    private BodyModel body;
 
 
     public int getId() {
@@ -32,11 +33,11 @@ public class Teste {
         this.nome = nome;
     }
 
-    public BodyModel getBodyfk() {
-        return bodyfk;
+    public BodyModel getBody() {
+        return body;
     }
 
-    public void setBodyfk(BodyModel bodyfk) {
-        this.bodyfk = bodyfk;
+    public void setBody(BodyModel body) {
+        this.body = body;
     }
 }
