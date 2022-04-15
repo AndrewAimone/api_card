@@ -16,11 +16,11 @@ import java.util.List;
 @RestController
 @RequestMapping("/teste")
 public class TesteController {
+
     @Autowired
     CardRepository cardRepository;
     @Autowired
     BodyRepository bodyRepository;
-
 
     @GetMapping("/listar")
     public ArrayList<Teste> testandometodo(){

@@ -31,4 +31,12 @@ public class Teste {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public BodyModel getBodyfk() {
+        return bodyfk;
+    }
+
+    public void setBodyfk(BodyModel bodyfk) {
+        this.bodyfk = bodyfk;
+    }
 }
